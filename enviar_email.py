@@ -4,7 +4,7 @@ import smtplib
 import ssl
 from email.message import EmailMessage
 from validar_relatorio import validar_todos_os_impostos
-from gerar_relatorios import output_dir
+from gerar_relatorios import getOut_dir
 
 remetente = "intsfiscalbot@gmail.com"
 destinatario = "fiscal@ints.org.br"
@@ -17,7 +17,8 @@ def capturar_erros_validacao():
 
     try:
         print("🚨 INÍCIO DAS VALIDAÇÕES\n")
-        result = validar_todos_os_impostos(output_dir)
+        out_dir, args = getOut_dir()
+        result = validar_todos_os_impostos(out_dir)
         
         
         for i in result:

@@ -1,6 +1,5 @@
 import os
 import pandas as pd
-from gerar_relatorios import output_dir
 import openpyxl
 import warnings
 import math
