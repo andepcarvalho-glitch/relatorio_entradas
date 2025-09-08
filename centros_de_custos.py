@@ -438,7 +438,7 @@ centros_de_custos_por_filial = {
     '80': [
         '02.03.040 - BERTIOGA - CTR 08-2025',
     ],
-    '81': ['81 - JUATUBA'],
+    '81': ['02.03.041.01 - JUATUBA'],
     '1002': [
         '01.01.001.02.027 - SEDEADM_02',
     ],
