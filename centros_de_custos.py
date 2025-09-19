@@ -402,10 +402,10 @@ centros_de_custos_por_filial = {
     ],
     '69': [
         
-        '02.03.029.01 - LABORATÓRIO - FLORESTAL ',
+        '02.03.029.01 - LABORATÓRIO - FLORESTAL ',
     ],
     '70': [
-        '02.03.030.01 - CENTRO DE ESPECIALIDADES MÉDICAS - ITAMBÉ DO MATO DENTRO ',
+        '02.03.030.01 - CENTRO DE ESPECIALIDADES MÉDICAS - ITAMBÉ DO MATO DENTRO ',
         
     ],
     '71': [

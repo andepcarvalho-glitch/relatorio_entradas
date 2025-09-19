@@ -301,6 +301,7 @@ def gerar_relatorio(session: requests.Session, filial_id: int, nome_filial: str,
     if not centros_post:
         print(f"❌ Nenhum centro aceito para filial {filial_id}. Verifique dumps em {out_dir}.")
         return
+        
 
     payload = [
         ("ds_filial", nome_filial),

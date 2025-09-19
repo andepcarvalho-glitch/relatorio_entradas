@@ -98,7 +98,10 @@ def validar_todos_os_impostos(pasta_das_planilhas):
             divergencias_csrf = validar_csrf(caminho_arquivo)
             resultados[nome_arquivo]["CSRF"] = divergencias_csrf
 
+
+
         except Exception as e:
             resultados[nome_arquivo]["AVISO"] =  f"⚠️  Filial sem movimento no periodo selecionado."
+        
 
     return resultados
