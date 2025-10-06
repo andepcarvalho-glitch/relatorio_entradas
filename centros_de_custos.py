@@ -445,6 +445,13 @@ centros_de_custos_por_filial = {
         '02.03.040 - BERTIOGA - CTR 08-2025',
     ],
     '81': ['02.03.041.01 - JUATUBA'],
+
+    '82': ['02.03.042.01 - FLORESTAL'],
+
+    '83': ['02.03.043.01 - SERVIÇO LOGISTICO - MG'],
+
+    '84': ['02.03.044.01 - ITAUNA - EVENTOS'],
+
     '1002': [
         '01.01.001.02.027 - SEDEADM_02',
     ],

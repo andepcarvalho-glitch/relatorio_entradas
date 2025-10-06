@@ -1,5 +1,5 @@
 
-filiais_ativas = [1, 7, 8, 11, 13, 18, 20, 31, 35, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80,81]
+filiais_ativas = [1, 7, 8, 11, 13, 18, 20, 31, 35, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80,81,82,83,84]
 filiais_nomes = {
     1: '1 - INTS - INSTITUTO NACIONAL DE TECNOLOGIA E SAUDE',
     7: '7 - SESAB 2',
@@ -47,7 +47,10 @@ filiais_nomes = {
     78: '78 - HOSPITAL 272 JOIAS - IGARAPÉ',
     79: '79 - UPA CONSELHEIRO LAFAIETE',
     80: '80 - BERTIOGA - CTR 08-2025',
-    81: '81 - JUATUBA'
+    81: '81 - JUATUBA',
+    82: '82 - FLORESTAL',
+    83: '83 - SERVIÇO LOGISTICO - MG',
+    84: '84 - ITAUNA - EVENTOS - MG'
 }
 
 filiais_ref = {
@@ -97,5 +100,8 @@ filiais_ref = {
     78: '78 - HOSPITAL 272 JOIAS - IGARAPÉ',
     79: '79 - UPA CONSELHEIRO LAFAIETE',
     80: '80 - BERTIOGA - CTR 08-2025',
-    81: '81 - JUATUBA'
+    81: '81 - JUATUBA',
+    82: '82 - FLORESTAL',
+    83: '83 - SERVIÇO LOGISTICO - MG',
+    84: '84 - ITAUNA - EVENTOS - MG'
 }
