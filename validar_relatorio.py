@@ -39,7 +39,13 @@ def validar_inss(caminho_arquivo):
         try:
             valor_inss = float(row["Valor INSS"])
             base_inss = float(row["Base Calc INSS"])
-            percentual_inss = float(row["% INSS"])
+            if base_inss == 0:
+                if valor_inss != 0:
+                    divergencias.append(f" ❌ Base INSS = R$ {base_inss:.2f} porém valor INSS = R$ {valor_inss:.2f} → Fluig: {fluig} | Fornecedor: {fornecedor} | IDMOV: {idmov} | Data de lançamento: {data_criacao}.")
+            if base_inss > 0 and valor_inss == 0:
+                divergencias.append(f" ❌ Base INSS = R$ {base_inss:.2f} porém valor INSS = R$ {valor_inss:.2f} → Fluig: {fluig} | Fornecedor: {fornecedor} | IDMOV: {idmov} | Data de lançamento: {data_criacao}.")
+            elif (row["% INSS"]) == '11%' or (row["% INSS"]) == '3.5%':
+                percentual_inss = float(row["% INSS"])
             data_criacao = row["Dt  Criação"]
             inss_calculado = base_inss * percentual_inss
             fluig = int(row["Fluig"]) if pd.notna(row["Fluig"]) else "(vazio)"
