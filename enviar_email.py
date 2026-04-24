@@ -8,7 +8,7 @@ from gerar_relatorios import getOut_dir
 
 remetente = "intsfiscalbot@gmail.com"
 destinatario = "fiscal@ints.org.br"
-senha_app = "aobp bnwa jghv rdpe"
+senha_app = "fnyg iubd qafm avkl"
 
 def capturar_erros_validacao():
     buffer = io.StringIO()

@@ -113,8 +113,9 @@ centros_de_custos_por_filial = {
     ],
     '18': [
         '76 - SUZANO PSF',
-        '77 - SUZANO SAMU'
-       ,
+        '77 - SUZANO SAMU',
+        '02.03.007.06 - SUZANO PSF | INDENIZATORIO',
+        '02.03.007.07 - SUZANO SAMU | INDENIZATORIO'
     ],
     '19': [
         '02.01.002 - ESPANHOL INDENIZATORIO',
@@ -441,9 +442,8 @@ centros_de_custos_por_filial = {
     '79': [
         '02.03.039.01 - UPA CONSELHEIRO LAFAIETE',
     ],
-    '80': [
-        '02.03.040 - BERTIOGA - CTR 08-2025',
-    ],
+    '80': ['02.03.040 - BERTIOGA - CTR 08-2025'],
+
     '81': ['02.03.041.01 - JUATUBA'],
 
     '82': ['02.03.042.01 - FLORESTAL'],
@@ -451,6 +451,30 @@ centros_de_custos_por_filial = {
     '83': ['02.03.043.01 - SERVIÇO LOGISTICO - MG'],
 
     '84': ['02.03.044.01 - ITAUNA - EVENTOS'],
+
+    '85': ['02.03.046.01 - CAPS BONFIM - MG '],
+
+    '86': ['02.03.047.01 - CAPS REGIONAL BONFIM - MG '], 
+
+    '87': ['02.03.045.01 - ITAUNA TI - MG'],
+
+    '88': ['02.03.051.01 - MARIANA - SERVICO DE INFORMACAO EM SAUDE - MG'],
+
+    '89': ['02.03.052.01 SERVICO LABORATORIAL - BRUMADINHO - MG'],
+
+    '90': ['02.03.050 - CISREC - MINAS GERAIS', 
+           '02.03.050.02 - CISREC - SANTA LUZIA'],
+
+    '91': ['02.03.053.01 - BERTIOGA UTI - CTR Nº 36/2025', '02.03.053 - BERTIOGA UTI - CTR Nº 36/2025'],
+
+    '92': ['02.03.048.01 - LABORATORIO DE ANALISES CLINICAS DE URGÊNCIA - MARIO CAMPOS'],
+
+    '93': ['02.03.049.01 - SÃO GONÇALO DO PARA - SERVICO DE INFORMACAO EM SAUDE - MG'],
+    '94': ['02.03.056.01 - REDE ASSISTENCIAL - GUANHÃES-MG'],
+    '95': ['02.03.057.01 - CONSULTORIA FINANCEIRA - ICISMEP - MG'],
+    '96': ['02.03.058.01 - CASA DE ACOLHIMENTO TERAPÊUTICO - BARBACENA-MG'],
+    '97': ['02.03.059.01 - ENGENHARIA CLÍNICA - CAETÉ-MG'],
+    '98': ['02.03.060.01 - LABORATÓRIO DE ANÁLISES CLÍNICAS - ABAETÉ-MG'],
 
     '1002': [
         '01.01.001.02.027 - SEDEADM_02',
