@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c ' *)",
+      "Bash(python -m py_compile auditor_fiscal.py)",
+      "Bash(timeout 100 python auditor_fiscal.py --inicio 2025-06-01 --fim 2025-06-30 --filiais 45 --sem-email --saida-dir \"/c/Users/anderson.carvalho/AppData/Local/Temp/auditor_test\")",
+      "Bash(rm -rf \"/c/Users/anderson.carvalho/AppData/Local/Temp/auditor_test\")",
+      "Bash(timeout 100 python auditor_fiscal.py --inicio 2018-01-01 --fim 2018-03-15 --filiais 11 --sem-email --saida-dir \"/c/Users/anderson.carvalho/AppData/Local/Temp/auditor_test2\")",
+      "Bash(rm -rf \"/c/Users/anderson.carvalho/AppData/Local/Temp/auditor_test2\")",
+      "Bash(python -m py_compile auditor_fiscal.py enviar_email.py)",
+      "Bash(python -m py_compile centros_de_custos.py)",
+      "Bash(python -m py_compile auditor_fiscal.py datas.py)",
+      "Bash(timeout 60 python auditor_fiscal.py --filiais 45 --sem-email --saida-dir \"/c/Users/anderson.carvalho/AppData/Local/Temp/auditor_test3\")",
+      "Bash(rm -rf \"/c/Users/anderson.carvalho/AppData/Local/Temp/auditor_test3\")",
+      "Bash(timeout 100 python auditor_fiscal.py --filiais 1,35,45,48 --sem-email --saida-dir \"/c/Users/anderson.carvalho/AppData/Local/Temp/auditor_test4\")",
+      "Bash(tee \"/c/Users/anderson.carvalho/AppData/Local/Temp/relatorio_final.txt\")",
+      "Bash(rm -rf \"/c/Users/anderson.carvalho/AppData/Local/Temp/auditor_test4\" \"/c/Users/anderson.carvalho/AppData/Local/Temp/relatorio_final.txt\")",
+      "Bash(timeout 170 python -c ' *)",
+      "Bash(rm -rf \"/c/Users/anderson.carvalho/AppData/Local/Temp/auditor_test5\" 2>/dev/null; true)"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\anderson.carvalho\\AppData\\Local\\Temp\\auditor_test",
+      "C:\\Users\\anderson.carvalho\\AppData\\Local\\Temp\\auditor_test2",
+      "C:\\Users\\anderson.carvalho\\AppData\\Local\\Temp\\auditor_test3",
+      "C:\\Users\\anderson.carvalho\\AppData\\Local\\Temp\\auditor_test4",
+      "C:\\Users\\anderson.carvalho\\AppData\\Local\\Temp"
+    ]
+  }
+}
