@@ -185,6 +185,7 @@ centros_de_custos_por_filial = {
         "85.01.035 - INFRAESTRUTURA",
         "85.02.005 - UPA PEDREIRA (CA)",
         "85.02.100 - PATRIMONIO",
+        "85.01.032 - HD SANTO AMARO - 2 ANDAR",
         "85.01.051 - RECURSOS HUMANOS - RH",
         "85.01.049 - TECNOLOGIA DA INFORMAÇÃO - TI",
         "85.02.007 - CAPS II - ADULTO  (CA)",
