@@ -499,6 +499,8 @@ centros_de_custos_por_filial = {
 
     '106': ['02.03.068.01 - LABORATORIO NOVA SERRANA'],
 
+    '107': ['02.03.069.01- HOSPITAL DE BELO VALE - ICISMEP MG'],
+
     '1002': [
         '01.01.001.02.027 - SEDEADM_02',
     ],
