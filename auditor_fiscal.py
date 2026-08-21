@@ -1,4 +1,3 @@
-
 import argparse
 import os
 import sys
@@ -30,7 +29,7 @@ SEPARADOR = "=-" * 20
 MOV_SIMPLES_NACIONAL = "1.2.14"  # "Entrada NF Simples Nacional"
 FILIAIS_SEM_VALIDACAO_VENCIMENTO = {35}  # nao se aplica a regra de vencimento < data de criacao
 
-FILIAL_ENVIO_OCULTO = 45  # quando esta filial tiver divergencia, envia relatorio isolado (oculto) abaixo
+FILIAL_ENVIO_OCULTO = {31, 45}  # quando esta filial tiver divergencia, envia relatorio isolado (oculto) abaixo
 EMAIL_DIVERGENCIA_FILIAL_OCULTA = "validacaonfhb@ints.org.br"
 
 COLUNAS = [
@@ -95,7 +94,7 @@ def _num(v) -> float:
 
 
 def divergencia(base, aliq, valor):
-    """Retorna o valor calculado (base * aliquota) se ele divergir do valor
+    """Retorna o valor calculated (base * aliquota) se ele divergir do valor
     lancado em mais de TOLERANCIA; caso contrario, retorna None (sem
     divergencia)."""
     calculado = _num(base) * _num(aliq)
@@ -430,23 +429,24 @@ def main() -> int:
         except Exception as exc:
             print(f"ERROR: falha ao enviar e-mail: {exc}")
 
-        eventos_filial_oculta = [ev for ev in eventos if ev["filial_id"] == FILIAL_ENVIO_OCULTO]
-        if eventos_filial_oculta:
-            try:
-                rows_filial_oculta = [row for row in rows if row.cd_filial == FILIAL_ENVIO_OCULTO]
-                relatorio_oculto, _ = montar_relatorio(rows_filial_oculta, [FILIAL_ENVIO_OCULTO])
-                corpo_html_oculto = montar_email_html(eventos_filial_oculta, [FILIAL_ENVIO_OCULTO], inicio, fim)
-                enviar_email_com_erro_no_corpo(
-                    relatorio_oculto, remetente, senha_app, EMAIL_DIVERGENCIA_FILIAL_OCULTA,
-                    corpo_html=corpo_html_oculto,
-                    assunto=f"📋 Relatório de Erros - Validações (Filial {FILIAL_ENVIO_OCULTO})",
-                )
-                print(
-                    f"INFO: e-mail oculto de divergencias da filial {FILIAL_ENVIO_OCULTO} "
-                    f"enviado para {EMAIL_DIVERGENCIA_FILIAL_OCULTA}"
-                )
-            except Exception as exc:
-                print(f"ERROR: falha ao enviar e-mail oculto da filial {FILIAL_ENVIO_OCULTO}: {exc}")
+        for filial_oculta in FILIAL_ENVIO_OCULTO:
+            eventos_filial_oculta = [ev for ev in eventos if ev["filial_id"] == filial_oculta]
+            if eventos_filial_oculta:
+                try:
+                    rows_filial_oculta = [row for row in rows if row.cd_filial == filial_oculta]
+                    relatorio_oculto, _ = montar_relatorio(rows_filial_oculta, [filial_oculta])
+                    corpo_html_oculto = montar_email_html(eventos_filial_oculta, [filial_oculta], inicio, fim)
+                    enviar_email_com_erro_no_corpo(
+                        relatorio_oculto, remetente, senha_app, EMAIL_DIVERGENCIA_FILIAL_OCULTA,
+                        corpo_html=corpo_html_oculto,
+                        assunto=f"📋 Relatório de Erros - Validações (Filial {filial_oculta})",
+                    )
+                    print(
+                        f"INFO: e-mail oculto de divergencias da filial {filial_oculta} "
+                        f"enviado para {EMAIL_DIVERGENCIA_FILIAL_OCULTA}"
+                    )
+                except Exception as exc:
+                    print(f"ERROR: falha ao enviar e-mail oculto da filial {filial_oculta}: {exc}")
 
     print(f"SUCCESS: auditoria concluida - {total_divergencias} divergencia(s) encontrada(s)")
     return 0

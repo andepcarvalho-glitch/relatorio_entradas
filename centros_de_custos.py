@@ -226,6 +226,7 @@ centros_de_custos_por_filial = {
         "85.02.098 - MANUTENCAO",
         "85.02.099 - SESMT",
         "85.02.102 - NIP - NUCLEO INFORMAÇÃO E PLANEJAMENTO",
+        "85.02.103 - GESTAO DA QUALIDADE",
         "85.02.107 - SAU SERV ATEND AO USUARIO",
         "85.02.109 - HIGIENE, LIMPEZA E COPA",
         "85.02.114 - EMAD-UBS V.IMPERIO II",
