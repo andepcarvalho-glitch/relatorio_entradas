@@ -237,6 +237,7 @@ centros_de_custos_por_filial = {
         "85.02.281 - PAI VL ARRIETE",
         "85.01.014 - ADMINISTRATIVO",
         "85.01.015 - FARMACIA",
+        "85.01.048 - CENTRO CIRURGICO",
         "85.01.016 - ALMOXARIFADO",
         "85.02.001 - AMA IMPERIO (CA)",
         "85.02.004 - AMA MISSIONARIA (CA)",
