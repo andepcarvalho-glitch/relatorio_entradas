@@ -40,6 +40,7 @@ centros_de_custos_por_filial = {
         '01.01.001.02.005 - DEPARTAMENTO PESSOAL',
         '01.01.001.02.006 - OPERAÇÕES',
         '01.01.001.02.007 - SSO',
+        '01.01.007.01.037 - SEDE UPA SUZANO',
         '01.01.001.02.008 - ADMINISTRATIVO (Dir Adm)',
         '01.01.001.02.012 - NÚCLEO DE ASSISTENCIA A SAÚDE',
         '01.01.001.02.014 - IMPLANTAÇÃO E ACOMPANHAMENTO',
