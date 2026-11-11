@@ -23,6 +23,7 @@ import pyodbc
 from dotenv import load_dotenv
 from openpyxl.styles.cell_style import StyleArray
 
+from baixas import remover_baixados
 from dados import filiais_ativas
 from datas import Datas
 
@@ -180,6 +181,8 @@ def main() -> int:
 
     with conectar() as conn:
         rows = buscar_lancamentos(conn, inicio.isoformat(), fim.isoformat(), filiais)
+        rows, qtd_baixados = remover_baixados(conn, rows)
+    print(f"{qtd_baixados} movimento(s) ja baixado(s) no financeiro ignorado(s).")
 
     por_filial: dict[int, list] = {}
     for r in rows:

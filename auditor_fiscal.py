@@ -10,6 +10,7 @@ from pathlib import Path
 import pyodbc
 from dotenv import load_dotenv
 
+from baixas import remover_baixados
 from centros_de_custos import centros_de_custos_por_filial
 from dados import filiais_ativas, filiais_ref
 from datas import Datas
@@ -399,6 +400,8 @@ def main() -> int:
     conn = conectar()
     try:
         rows = buscar_lancamentos(conn, inicio, fim, filiais_alvo)
+        rows, qtd_baixados = remover_baixados(conn, rows)
+        print(f"INFO: {qtd_baixados} movimento(s) ja baixado(s) no financeiro ignorado(s)")
     finally:
         conn.close()
 
