@@ -1,11 +1,12 @@
-"""Identifica movimentos de entrada cujos lancamentos financeiros ja foram baixados.
+"""Identifica movimentos de entrada que ja foram quitados (baixados) no financeiro.
 
-A baixa fica no financeiro do RM (tabela FLAN, a mesma que alimenta a v_Pagamentos):
-FLAN.STATUSLAN = 1 -> baixado (equivale a v_Pagamentos.DATABAIXA preenchida).
-Um movimento so e considerado baixado quando TODOS os seus lancamentos (parcelas)
-estao baixados; se houver alguma parcela em aberto, ele continua no relatorio.
+Usa o status do movimento no RM: TMOV.STATUS = 'Q' (Quitado), que o RM marca quando
+todos os lancamentos financeiros do movimento estao baixados.
+
+Nao usar FLAN.STATUSLAN: na replica (ODS) ha lancamentos com baixa registrada na
+FLANBAIXA e o movimento ja quitado, mas STATUSLAN ainda 0 (em aberto). Ex.: IDMOV 666377.
 """
-STATUSLAN_BAIXADO = 1
+STATUS_QUITADO = "Q"
 _LOTE = 500
 
 
@@ -17,9 +18,8 @@ def movimentos_baixados(conn, id_movs) -> set:
         lote = ids[i:i + _LOTE]
         placeholders = ",".join("?" for _ in lote)
         cur.execute(
-            f"SELECT IDMOV FROM FLAN WHERE CODCOLIGADA = 1 AND IDMOV IN ({placeholders}) "
-            f"GROUP BY IDMOV HAVING MIN(CASE WHEN STATUSLAN = ? THEN 1 ELSE 0 END) = 1",
-            [*lote, STATUSLAN_BAIXADO],
+            f"SELECT IDMOV FROM TMOV WHERE CODCOLIGADA = 1 AND STATUS = ? AND IDMOV IN ({placeholders})",
+            [STATUS_QUITADO, *lote],
         )
         baixados.update(r[0] for r in cur.fetchall())
     return baixados
