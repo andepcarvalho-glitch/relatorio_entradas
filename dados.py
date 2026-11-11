@@ -1,4 +1,4 @@
-filiais_ativas = [1, 7, 8, 11, 13, 18, 20, 31, 35, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107]
+filiais_ativas = [1, 7, 8, 11, 13, 18, 20, 31, 35, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108]
 filiais_nomes = {
     1: '1 - INTS - INSTITUTO NACIONAL DE TECNOLOGIA E SAUDE',
     7: '7 - SESAB 2',
@@ -72,7 +72,8 @@ filiais_nomes = {
     104: '104 - AMBULANCIA - FORMIGA - MG',
     105: '105 - SUZANO CTR Nº 224/2026',
     106: '106 - LABORATORIO NOVA SERRANA',
-    107: '107 - HOSPITAL DE BELO VALE - ICISMEP MG'
+    107: '107 - HOSPITAL DE BELO VALE - ICISMEP MG',
+    108: '108 - UBS CARANDAÍ - MG'
 }
 
 filiais_ref = {
@@ -148,5 +149,6 @@ filiais_ref = {
     104: '104 - AMBULANCIA - FORMIGA - MG',
     105: '105 - SUZANO CTR Nº 224/2026',
     106: '106 - LABORATORIO NOVA SERRANA',
-    107: '107 - HOSPITAL DE BELO VALE - ICISMEP MG'
+    107: '107 - HOSPITAL DE BELO VALE - ICISMEP MG',
+    108: '108 - UBS CARANDAÍ - MG'
 }

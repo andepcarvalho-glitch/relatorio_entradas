@@ -507,6 +507,8 @@ centros_de_custos_por_filial = {
 
     '107': ['02.03.069.01 - HOSPITAL DE BELO VALE - ICISMEP MG'],
 
+    '108': ['02.03.070.01 - UBS CARANDAÍ -MG'],
+
     '1002': [
         '01.01.001.02.027 - SEDEADM_02',
     ],
